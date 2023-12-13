@@ -49,11 +49,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
       - name: Download build
         uses: actions/download-artifact@v1
         with:
